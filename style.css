@@ -2,3 +2,8 @@
 h1, h2 {
   font-family: Lato;
 }
+
+#viz1, #viz3 {
+  width: 50%;
+  height: 400px;
+}
