@@ -1,12 +1,42 @@
 // Import stylesheets
 import './style.css';
 
-//Gráfico de columnas.
-visualization = d3plus.viz()
+
+//Gráfico de columnas. Mi 1º gráfico
+var visualization = d3plus.viz()
  .container("#viz1")
  .data([{"year": 1991, "name":"alpha", "value": 15},
  {"year": 1992, "name":"alpha", "value": 20},])
  .type("bar")
+ .id("name")
+ .x("year")
+ .y("value")
+ .draw()
+
+ //Gráfico extra
+ var data = [
+   {"year": 1991, "name":"alpha", "value":15},
+   {"year": 1992, "name":"alpha", "value":34},
+   {"year": 1991, "name":"alpha2", "value":17},
+   {"year": 1992, "name":"alpha2", "value":65},
+   {"year": 1991, "name":"beta", "value":10},
+   {"year": 1992, "name":"beta", "value":10},
+   {"year": 1991, "name":"beta2", "value":40},
+   {"year": 1992, "name":"beta2", "value":38},
+   {"year": 1991, "name":"gamma", "value":5},
+   {"year": 1992, "name":"gamma", "value":10},
+   {"year": 1991, "name":"gamma2", "value":20},
+   {"year": 1992, "name":"gamma2", "value":34},
+   {"year": 1991, "name":"delsta", "value":50},
+   {"year": 1992, "name":"delsta", "value":43},
+   {"year": 1991, "name":"delsta2", "value":17},
+   {"year": 1992, "name":"delsta2", "value":35},
+ ]
+
+ var visualization = d3plus.viz()
+ .container("#viz3")
+ .data(data)
+ .type("box")
  .id("name")
  .x("year")
  .y("value")
